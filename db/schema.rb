@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_21_204610) do
+ActiveRecord::Schema.define(version: 2022_03_22_154411) do
 
   create_table "relay_points", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2022_03_21_204610) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "phone_number"
     t.text "location"
+    t.string "name_common"
+    t.integer "contact"
+    t.string "status"
+    t.integer "hours"
+    t.string "name_shopify"
+    t.string "commune"
   end
 
 end
