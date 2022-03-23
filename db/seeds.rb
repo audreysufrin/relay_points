@@ -15,12 +15,10 @@
 
 
 puts "Destroying Users... "
-User.destroy_all
 puts "Users destroyed"
 
 puts "Creating Users... "
-user1 = User.create!()
-user2 = User.create!()
+
 
 puts "Users Created"
 
