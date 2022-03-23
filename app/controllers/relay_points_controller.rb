@@ -18,12 +18,6 @@ class RelayPointsController < ApplicationController
     redirect_to relay_point_path(@relay_point)
   end
 
-  private
-
-  def relay_point_params
-    params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :geolocalisation, :address, :contact, :status, :commune, :disponibility, :phone_number)
-  end
-
   def edit
     @relay_point = RelayPoint.find(params[:id])
   end
@@ -35,10 +29,6 @@ class RelayPointsController < ApplicationController
     redirect_to relay_point_path(relay_point)
   end
 
-  private
-  def relay_point_params
-    params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :geolocalisation, :address, :contact, :status, :commune, :disponibility, :phone_number)
-  end
 
   def destroy
     relay_point = RelayPoint.find(params[:id])
@@ -46,4 +36,11 @@ class RelayPointsController < ApplicationController
 
     redirect_to relay_point_path
   end
+
+  private
+
+  def relay_point_params
+    params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :geolocalisation, :address, :contact, :status, :commune, :disponibility, :phone_number)
+  end
+
 end
