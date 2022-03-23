@@ -15,15 +15,14 @@ ActiveRecord::Schema.define(version: 2022_03_22_154411) do
   create_table "relay_points", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.date "disponibility"
+    t.date "hours"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "phone_number"
-    t.text "location"
+    t.text "localisation"
     t.string "name_common"
     t.integer "contact"
     t.string "status"
-    t.integer "hours"
     t.string "name_shopify"
     t.string "commune"
   end
