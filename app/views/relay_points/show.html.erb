@@ -1,10 +1,18 @@
-<h2><%= @relay_point.name %></h2>
-<p><%= @relay_point.name_shopify %></p>
-<p><%= @relay_point.name_common %></p>
-<p><%= @relay_point.hours %></p>
-<p><%= @relay_point.geolocalisation %></p>
-<p><%= @relay_point.address %></p>
-<p><%= @relay_point.contact %></p>
-<p><%= @relay_point.commune %></p>
-<p><%= @relay_point.disponibility %></p>
-<p><%= @relay_point.phone_number %></p>
+<div class="navbar">
+<div class="container">
+<div class="card-relay-point" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+  <<%= image_tag "" %>>
+  <div class="card-infos">
+    <h1><%= @relay_point.name %></h1>
+    <p><%= @relay_point.name_shopify %></p>
+    <p><%= @relay_point.name_common %></p>
+    <p><%= @relay_point.hours %></p>
+    <p><%= @relay_point.address %></p>
+    <p><%= @relay_point.contact %></p>
+    <p><%= @relay_point.commune %></p>
+    <p><%= @relay_point.status %></p>
+    <p><%= @relay_point.phone_number %></p>
+    <p><%= @relay_point.location %></p>
+    <a class="btn btn-gradient" href="#">localisation</a>
+  </div>
+</div>
