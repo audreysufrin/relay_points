@@ -11,7 +11,7 @@ class RelayPointsController < ApplicationController
     @relay_point = RelayPoint.new
   end
 
-    def create
+  def create
     @relay_point = RelayPoint.new(relay_point_params)
     @relay_pointt.save
     redirect_to relay_point_path(@relay_point)
@@ -30,12 +30,12 @@ class RelayPointsController < ApplicationController
   def destroy
     @relay_point = RelayPoint.find(params[:id])
     @relay_point.destroy
-    redirect_to relay_point_path
+    redirect_to relay_points_path
   end
 
   private
 
-    def relay_point_params
+  def relay_point_params
     params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :localisation, :address, :contact, :status, :commune, :phone_number)
   end
 end
