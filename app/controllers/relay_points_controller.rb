@@ -2,7 +2,6 @@ class RelayPointsController < ApplicationController
   def index
     @relay_points = RelayPoint.all
   end
-
   def show
     @relay_point = RelayPoint.find(params[:id])
   end
