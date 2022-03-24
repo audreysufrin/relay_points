@@ -32,4 +32,4 @@ relay_point10 = RelayPoint.create!(name: "Mr Pasua", name_shopify:"pr-pasua", na
 relay_point11 = RelayPoint.create!(name: "Mme et Mr Toris",name_shopify:"pr-toris", name_common: "Chez Mme et Mr Toris", hours: "10h à 12h et 13h à 17h", localisation:"https://goo.gl/maps/zhKEy21vSgSw87y96", address: "Quartier Médecin", contact: "Ta Nou", status:"Actif", commune: "Riviere-Salée", phone_number:"0696.88.34.05")
 
 
-puts "Relay Point Created"
+puts 'Relay Point Created'
