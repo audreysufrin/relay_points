@@ -10,16 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_22_154411) do
+ActiveRecord::Schema.define(version: 2022_03_23_201700) do
 
   create_table "relay_points", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.date "disponibility"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "phone_number"
-    t.text "location"
+    t.text "localisation"
     t.string "name_common"
     t.integer "contact"
     t.string "status"
