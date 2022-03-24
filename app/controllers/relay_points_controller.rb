@@ -26,9 +26,9 @@ class RelayPointsController < ApplicationController
     relay_point.destroy
     redirect_to relay_point_path
   end
-  private
+
+ private
   def relay_point_params
     params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :localisation, :address, :contact, :status, :commune, :phone_number)
-    end
   end
 end
