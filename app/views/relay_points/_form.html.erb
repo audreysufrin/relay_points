@@ -1,14 +1,25 @@
-<%= simple_form_for(relay_point) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :name_shopify %>
-  <%= f.input :name_common %>
-  <%= f.input :name %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :contact %>
-  <%= f.input :status %>
-  <%= f.input :commune %>
-  <%= f.input :disponibility %>
-  <%= f.input :phone_number %>
-  <%= f.submit %>
-<% end %>
+<div class="background-form">
+  <div class="container">
+    <div class="row">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+          <h3><strong>Nouveau point relais</strong></h3>
+          <%= simple_form_for(relay_point) do |f| %>
+            <%= f.input :name %>
+            <%= f.input :name_shopify %>
+            <%= f.input :name_common %>
+            <%= f.input :hours %>
+            <%= f.input :location %>
+            <%= f.input :address %>
+            <%= f.input :contact %>
+            <%= f.input :status, as: :select, collection: ["actif", "inactif"] %>
+            <%= f.input :commune, as: :select, collection: ["Ajoupa-Bouillon","Anses-d'Arlet", "Basse-Pointe", "Bellefontaine", "Carbet", "Case-Pilote", "Diamant", "Ducos", "Fonds-Saint-Denis", "Fort-de-France", "François", "Grand-Rivière", "Gros-Morne", "Lamentin", "Lorrain", "Macouba","Marigot", "Marin", "Morne-Vert","Morne-Rouge", "Prêcheur", "Rivière-Pilote", "Rivière-Salée", "Robert", "Saint-Esprit", "Saint-Joseph", "Saint-Pierre", "Sainte-Anne", "Sainte-Luce", "Sainte-Marie", "Schoelcher", "Trinité", "Trois-Ilets", "Vauclin"]%>
+            <%= f.input :disponibility %>
+            <%= f.input :phone_number %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

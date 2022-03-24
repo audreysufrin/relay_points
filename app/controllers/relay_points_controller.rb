@@ -8,7 +8,7 @@ class RelayPointsController < ApplicationController
   end
 
   def new
-    @relay_points = RelayPoint.new
+    @relay_point = RelayPoint.new
   end
 
   def create
