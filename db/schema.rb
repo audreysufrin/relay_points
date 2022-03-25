@@ -20,11 +20,12 @@ ActiveRecord::Schema.define(version: 2022_03_23_201700) do
     t.integer "phone_number"
     t.text "localisation"
     t.string "name_common"
-    t.integer "contact"
+    t.string "contact"
     t.string "status"
-    t.integer "hours"
+    t.string "hours"
     t.string "name_shopify"
     t.string "commune"
+    t.string "image_shopify"
   end
 
 end
