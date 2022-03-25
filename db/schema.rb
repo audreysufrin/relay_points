@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_144044) do
     t.string "name_common"
     t.string "contact"
     t.string "status"
-    t.integer "hours"
+    t.string "hours"
     t.string "name_shopify"
     t.string "commune"
     t.string "image_shopify"
