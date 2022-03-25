@@ -1,22 +1,16 @@
 <div class="container">
-  <div class="card-relay-point"
+  <div class="card-relay-point">
     <div class="image">
-      <img href = "#" src =<%= @relay_point.image_url %> width=200px height=200px>
+      <img src=<%= @relay_point.image_shopify %> />
     </div>
     <div class="content">
       <h2><%= @relay_point.name %></h2>
-      <p><%= @relay_point.name_shopify %></p>
-      <p><%= @relay_point.name_common %></p>
       <p><%= @relay_point.hours %></p>
-      <p><%= @relay_point.localisation %></p>
       <p><%= @relay_point.address %></p>
-      <p><%= @relay_point.contact %></p>
       <p><%= @relay_point.commune %></p>
       <p><%= @relay_point.phone_number %></p>
-      <%= link_to 'localisation', relay_point_path(@relay_point), class: "btn btn-primary position-absolute top-100 start-50 translate-middle btn-block" %>
-
     </div>
   </div>
+  <div>
+      <%= link_to '', relay_point_path(@relay_point), class: "btn btn-primary" %>
 </div>
-
-style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.shopify.com/s/files/1/0246/4035/6429/files/IMG-20210330-WA0000.jpg?v=1617111175)">
