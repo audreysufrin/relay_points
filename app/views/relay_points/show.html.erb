@@ -1,6 +1,7 @@
 <div class="container">
   <div class="card-relay-point">
     <div class="image">
+
       <img src=<%= @relay_point.image_shopify %> />
     </div>
     <div class="content">
@@ -14,3 +15,11 @@
   <div>
       <%= link_to '', relay_point_path(@relay_point), class: "btn btn-primary" %>
 </div>
+
+
+
+<%= link_to "Delete #{@relay_point.name}",
+            relay_point_path(@relay_point),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+

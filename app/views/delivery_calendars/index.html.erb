@@ -1,0 +1,5 @@
+<ul>
+  <% @delivery_calendars.each do |delivery_calendar| %>
+     <li><%= link_to delivery_calendar.name, delivery_calendar_path(delivery_calendar) %></li>
+  <% end %>
+</ul>
