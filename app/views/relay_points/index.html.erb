@@ -36,6 +36,9 @@
     <% @relay_points.each do |relay_point| %>
       <%= link_to relay_points_path(relay_point) do %>
         <div class="card-product">
+        <%= link_to "edit #{@relay_point}",
+            relay_points_path(@relay_point),
+            method: :edit %>
           <%= image_tag relay_point.image_shopify %>
           <h2><%= relay_point.name %></h2>
           <p><%= relay_point.address %></p>
