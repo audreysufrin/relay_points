@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_25_144044) do
+ActiveRecord::Schema.define(version: 2022_03_28_160749) do
 
   create_table "delivery_calendars", force: :cascade do |t|
     t.string "user"
     t.string "hours_available"
     t.string "place_of_delivery"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "delivery_dates", force: :cascade do |t|
+    t.string "date"
+    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,7 +37,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_144044) do
     t.string "name_common"
     t.string "contact"
     t.string "status"
-    t.string "hours"
+    t.integer "hours"
     t.string "name_shopify"
     t.string "commune"
     t.string "image_shopify"
