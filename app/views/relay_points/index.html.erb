@@ -1,20 +1,53 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-3 col-sm-4">
-      <div class="cards-list">
-        <% @relay_points.each do |relay_point| %>
-          <%= link_to relay_points_path(relay_point) do %>
-              <div class="card-product">
-                <%= image_tag relay_point.image_shopify %>
-                <h2><%= relay_point.name %></h2>
-                <p><%= relay_point.address %></p>
-                <p><%= relay_point.phone_number %></p>
-                <p><%= relay_point.status %></p>
-                <p><%= relay_point.hours %></p>
-              </div>
-          <% end %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%#= link_to image_tag ("https://www.facebook.com/tanoubio/photos/a.1839580942959237/2380237102226949/")%>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <%# if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Identifiez-vous", "https://www.ta-nou.bio/account/login", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Retour à l'accueil", "https://www.ta-nou.bio/", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%#= image_tag "https://www.stickpng.com/fr/img/icones-logos-emojis/consommateurs/simple-icone-consommateur", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <%# else %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class= "col-12 col-8">
+    <div class="cards-list">
+      <% @relay_points.each do |relay_point| %>
+        <%= link_to relay_points_path(relay_point) do %>
+          <div class="card-product">
+            <%= link_to "Modifier #{relay_point.name}",
+            relay_point_path(relay_point),class: "btn btn-flat"%>
+            <%= image_tag relay_point.image_shopify %>
+            <h2><%= relay_point.name %></h2>
+            <p><%= relay_point.address %></p>
+            <p><%= relay_point.phone_number %></p>
+            <p><%= relay_point.status %></p>
+           <p><%= relay_point.hours %></p>
+          </div>
         <% end %>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
