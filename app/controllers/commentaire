@@ -1,0 +1,9 @@
+créer une route appelée relay-points-api
+qui va pointer sur le relay-point controller et l'action
+index-api
+
+ds relay-points controller créer action index_api
+stocker ds variable @relay_point
+l'ensemble des points-relay actifs
+
+utiliser j builder pour restituer liste au format json
