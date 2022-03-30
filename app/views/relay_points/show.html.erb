@@ -1,26 +1,19 @@
 <div class="container">
-  <div class="row">
-    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
       <div class="card-relay-point">
         <div class="card-image">
           <img src=<%= @relay_point.image_shopify %> />
-          <div class="card-content">
-            <h2><%= @relay_point.name %></h2>
-            <p><%= @relay_point.hours %></p>
-            <p><%= @relay_point.address %></p>
-            <p><%= @relay_point.commune %></p>
-            <p><%= @relay_point.phone_number %></p>
-            <%= link_to '', relay_point_path(@relay_point), class: "btn btn-primary" %>
-          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
-  <%= link_to "Delete #{@relay_point.name}",
+      <div class="card-content">
+        <h2><%= @relay_point.name %></h2>
+        <p><%= @relay_point.hours %></p>
+        <p><%= @relay_point.address %></p>
+        <p><%= @relay_point.commune %></p>
+        <p><%= @relay_point.phone_number %></p>
+        <%= link_to '', relay_point_path(@relay_point), class: "btn btn-primary" %>
+        <%= link_to "Delete #{@relay_point.name}",
             relay_point_path(@relay_point),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
-
+      </div>
 </div>
