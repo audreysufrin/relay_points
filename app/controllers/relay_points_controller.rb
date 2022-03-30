@@ -1,4 +1,6 @@
 class RelayPointsController < ApplicationController
+  require "json"
+
   def index
     @relay_points = RelayPoint.all
   end
@@ -34,7 +36,7 @@ class RelayPointsController < ApplicationController
   end
 
   def index_api
-    @relay_point = relay-points{
+    @relay_points = {relay_points: [
       {
         name: "Ta Nou",
         address: "Baie des Tourelles - quartier Dillon",
@@ -76,9 +78,11 @@ class RelayPointsController < ApplicationController
         address: "Quartier Médecin",
         hours: "10h à 12h et 13h à 17h",
         status: "actif"
-      },
-    }
-
+      }
+    ] }
+    File.open(file_path, "wb") do |file|
+      file.write(JSON.generate(relay_points))
+    end
   end
 
   private
@@ -86,5 +90,4 @@ class RelayPointsController < ApplicationController
   def relay_point_params
     params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :localisation, :address, :contact, :status, :commune, :phone_number)
   end
-
 end
