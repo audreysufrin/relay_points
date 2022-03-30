@@ -12,10 +12,10 @@
       <ul class="navbar-nav">
         <%# if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Identifiez-vous", "#", class: "nav-link" %>
+            <%= link_to "Identifiez-vous", "https://www.ta-nou.bio/account/login", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Retour à l'accueil", "#", class: "nav-link" %>
+            <%= link_to "Retour à l'accueil", "https://www.ta-nou.bio/", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%#= image_tag "https://www.stickpng.com/fr/img/icones-logos-emojis/consommateurs/simple-icone-consommateur", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -31,22 +31,23 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="cards-list">
-    <% @relay_points.each do |relay_point| %>
-      <%= link_to relay_points_path(relay_point) do %>
-        <div class="card-product">
-        <%= link_to "edit #{@relay_point}",
-            relay_points_path(@relay_point),
-            method: :edit %>
-          <%= image_tag relay_point.image_shopify %>
-          <h2><%= relay_point.name %></h2>
-          <p><%= relay_point.address %></p>
-          <p><%= relay_point.phone_number %></p>
-          <p><%= relay_point.status %></p>
-          <p><%= relay_point.hours %></p>
-        </div>
+<div class="container mt-5">
+  <div class= "col-12 col-8">
+    <div class="cards-list">
+      <% @relay_points.each do |relay_point| %>
+        <%= link_to relay_points_path(relay_point) do %>
+          <div class="card-product">
+            <%= link_to "Modifier #{relay_point.name}",
+            relay_point_path(relay_point),class: "btn btn-flat"%>
+            <%= image_tag relay_point.image_shopify %>
+            <h2><%= relay_point.name %></h2>
+            <p><%= relay_point.address %></p>
+            <p><%= relay_point.phone_number %></p>
+            <p><%= relay_point.status %></p>
+           <p><%= relay_point.hours %></p>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
