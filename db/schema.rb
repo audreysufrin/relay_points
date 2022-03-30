@@ -48,5 +48,4 @@ ActiveRecord::Schema.define(version: 2022_03_29_161859) do
     t.string "commune"
     t.string "image_shopify"
   end
-
 end
