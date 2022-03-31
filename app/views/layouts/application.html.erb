@@ -11,8 +11,8 @@
   </head>
 
   <body>
-    <div class='vh-100'>
-      <%= yield %>
-    </div>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+    <%= yield %>
   </body>
 </html>

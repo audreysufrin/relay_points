@@ -1,36 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%#= link_to image_tag ("https://www.facebook.com/tanoubio/photos/a.1839580942959237/2380237102226949/")%>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Identifiez-vous", "https://www.ta-nou.bio/account/login", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Retour à l'accueil", "https://www.ta-nou.bio/", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%#= image_tag "https://www.stickpng.com/fr/img/icones-logos-emojis/consommateurs/simple-icone-consommateur", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-        <%# else %>
-      </ul>
-    </div>
-  </div>
-</div>
-
+<% if admin_signed_in? %>
+<p>Vous êtes bien connectée en tant qu'administrateur <%= current_admin.email %> </p>
+<% end %>
 <div class="container mt-5">
   <div class= "col-12 col-8">
     <div class="cards-list">
