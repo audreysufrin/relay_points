@@ -2,7 +2,7 @@ require 'date'
 require 'time'
 
 class DeliveryDatesController < ApplicationController
-  def nextDeliveryDate
+  def next_delivery_date
     date = Time.new(2022, 04, 12, 20, 04)
     if date.wday == 1 || (date.wday == 2 && date.hour < 19)
       @next_delivery = date.to_date
