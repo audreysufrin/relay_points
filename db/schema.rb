@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2022_03_31_014007) do
+ActiveRecord::Schema.define(version: 2022_03_31_135748) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -24,9 +23,6 @@ ActiveRecord::Schema.define(version: 2022_03_31_014007) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
-=======
-ActiveRecord::Schema.define(version: 2022_03_31_135748) do
->>>>>>> 8fcc80e78b5a8ab732a5c408531db09a562a78d7
 
   create_table "day_offs", force: :cascade do |t|
     t.date "day_off_date"
@@ -59,7 +55,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_135748) do
     t.string "name_common"
     t.string "contact"
     t.string "status"
-    t.string "hours"
+    t.integer "hours"
     t.string "name_shopify"
     t.string "commune"
     t.string "image_shopify"
