@@ -9,13 +9,12 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: black;
   display: inline;
   float: right;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100px;
 }
 .navbar-nav{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,4 +25,10 @@
   padding: 8px;
   background-color: #dddddd;
   justify-content: right;
+}
+.dropdown-toggle{
+  width: 33%;
+}
+.dropdown-menu {
+  position: unset !important;
 }

@@ -17,10 +17,11 @@ class DeliveryDatesController < ApplicationController
     while DayOff.exists?(day_off_date: @next_delivery)
       @next_delivery += 7
     end
+    return @next_delivery
   end
 
   def next_delivery_api
-    @next_delivery_date = nextDeliveryDate
+    @next_delivery_date = next_delivery_date
     render json: @next_delivery_date.to_json
   end
 end
