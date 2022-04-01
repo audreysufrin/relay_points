@@ -10,6 +10,7 @@ class DayOffsController < ApplicationController
   def create
     @day_off = DayOff.new(day_off_params)
     @day_off.save!
+
     redirect_to day_offs_path
   end
 
@@ -28,6 +29,6 @@ class DayOffsController < ApplicationController
   private
 
   def day_off_params
-    params.require(:day_off).permit(:date)
+    params.require(:day_off).permit(:day_off_date)
   end
 end

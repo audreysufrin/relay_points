@@ -3,7 +3,7 @@ require 'time'
 
 class DeliveryDatesController < ApplicationController
   def next_delivery_date
-    date = Time.new(2022, 04, 12, 20, 04)
+    date = Date.today
     if date.wday == 1 || (date.wday == 2 && date.hour < 19)
       @next_delivery = date.to_date
     else
@@ -12,6 +12,10 @@ class DeliveryDatesController < ApplicationController
 
     until (@next_delivery.wday == 5)
       @next_delivery = @next_delivery.next_day
+    end
+
+    while DayOff.exists?(day_off_date: @next_delivery)
+      @next_delivery += 7
     end
   end
 

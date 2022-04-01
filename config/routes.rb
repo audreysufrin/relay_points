@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'relay_points/api', to: 'relay_points#index_api'
   get 'next_delivery/api', to: 'delivery_dates#next_delivery_api'
   resources :relay_points
-  resources :delivery_calendars
   resources :day_offs
-  get "delivery_dates/next_delivery_date", to: "delivery_dates#next_delivery_date"
+  get "next_delivery_date", to: "delivery_dates#next_delivery_date"
+  get "list_day_off", to: "day_offs#index"
 end

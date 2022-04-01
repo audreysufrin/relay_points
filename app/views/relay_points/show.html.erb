@@ -7,11 +7,12 @@
           </div>
           <div class= "card-content" >
             <div><h2><%= @relay_point.name %></h2></div>
-            <div><p><%= @relay_point.address %></p>
-            <p><%= @relay_point.commune %></p>
-            <p><%= @relay_point.phone_number %></p>
-            <p><<%= @relay_point.status %></p>
-            <p><%= @relay_point.hours %></p>
+            <div>
+              <p><%= @relay_point.address %></p>
+              <p><%= @relay_point.commune %></p>
+              <p><%= @relay_point.phone_number %></p>
+              <p><<%= @relay_point.status %></p>
+              <p><%= @relay_point.hours %></p>
             </div>
           </div>
           <div class= "card-link">
@@ -27,4 +28,21 @@
         </div>
       </div>
     </div>
+
+    <div class="content">
+      <h2><%= @relay_point.name %></h2>
+      <p><%= @relay_point.hours %></p>
+      <p><%= @relay_point.address %></p>
+      <p><%= @relay_point.commune %></p>
+      <p><%= @relay_point.phone_number %></p>
+    </div>
+  </div>
+  <div>
+      <%= link_to '', relay_point_path(@relay_point), class: "btn btn-danger" %>
+  </div>
+
+  <%= link_to "Delete #{@relay_point.name}",
+            relay_point_path(@relay_point),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
 </div>
