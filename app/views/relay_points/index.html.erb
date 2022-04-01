@@ -2,9 +2,10 @@
 <p>Hello!<%= current_admin.email %> </p>
 <% end %>
 <body>
-  <div class="container">
-    <div class="cards-list">
-      <% @relay_points.each do |relay_point| %>
+  <div class="background-form">
+    <div class="container">
+      <div class="cards-list">
+        <% @relay_points.each do |relay_point| %>
           <div class="card-product">
             <%= image_tag relay_point.image_shopify %>
             <h2><%= relay_point.name %></h2>
@@ -15,7 +16,8 @@
             <%= link_to "Modifier #{relay_point.name}",
             (relay_point),class: "btn btn-flat"%>
           </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </body>

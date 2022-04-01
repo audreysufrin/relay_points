@@ -43,3 +43,8 @@
       display:block
     }
 }
+
+.background-form {
+  background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,0.4)), url('legumes.jpg');
+  background-size: cover;
+}
