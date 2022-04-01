@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_03_31_014007) do
 
   create_table "admins", force: :cascade do |t|
@@ -23,9 +24,12 @@ ActiveRecord::Schema.define(version: 2022_03_31_014007) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
+=======
+ActiveRecord::Schema.define(version: 2022_03_31_135748) do
+>>>>>>> 8fcc80e78b5a8ab732a5c408531db09a562a78d7
 
   create_table "day_offs", force: :cascade do |t|
-    t.datetime "date"
+    t.date "day_off_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

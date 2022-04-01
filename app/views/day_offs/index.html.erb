@@ -1,18 +1,19 @@
 <div class="header-banner"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('vegetables.jpg') %>);">
   <div class= "container">
     <div class= "text-center" >
-      <h1> <%= @day_offs.count %> Les jours fériés </h1>
+      <h1> <%= @day_offs.count %> Jours fériés </h1>
     </div>
   </div>
-</div>
 
- <ul>
-  <% @day_offs.each do |day_off| %>
-     <li><%= day_off.date %></li>
-     <%= link_to "Delete",
-            day_off_path(day_off),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-  <% end %>
-   </ul>
+  <ol style="list-style-type: decimal" class= "text-center">
+    <% @day_offs.each do |day_off| %>
+      <li><%= day_off.day_off_date.strftime("%d/%m/%Y") %>
+        <%= link_to "Supprimer",
+              day_off_path(day_off), class: "btn btn-danger m-2",
+              method: :delete,
+              data: { confirm: "Etes-vous sûr?" } %>
+      </li>
+     <% end %>
+     <%= link_to "Retour", new_day_off_path, class: "btn btn-light" %>
+  </ol>
 </div>
