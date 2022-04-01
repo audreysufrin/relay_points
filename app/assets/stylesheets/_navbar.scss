@@ -14,7 +14,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 10px;
+  width: 100px;
 }
 .navbar-nav{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,6 +26,9 @@
   background-color: #dddddd;
   justify-content: right;
 }
-.avatar-dropdown-toggle{
-  width: 75px;
+.dropdown-toggle{
+  width: 33%;
+}
+.dropdown-menu {
+  position: unset !important;
 }

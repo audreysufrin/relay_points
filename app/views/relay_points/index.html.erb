@@ -1,22 +1,20 @@
 <% if admin_signed_in? %>
-<p>Vous êtes bien connectée en tant qu'administrateur <%= current_admin.email %> </p>
+<p>Hello!<%= current_admin.email %> </p>
 <% end %>
 <body>
   <div class="container">
     <div class="cards-list">
       <% @relay_points.each do |relay_point| %>
-        <%= link_to relay_points_path(relay_point) do %>
           <div class="card-product">
-            <%= link_to "Modifier #{relay_point.name}",
-            (relay_point),class: "btn btn-flat"%>
             <%= image_tag relay_point.image_shopify %>
             <h2><%= relay_point.name %></h2>
             <p><%= relay_point.address %></p>
             <p><%= relay_point.phone_number %></p>
             <p><%= relay_point.status %></p>
             <p><%= relay_point.hours %></p>
+            <%= link_to "Modifier #{relay_point.name}",
+            (relay_point),class: "btn btn-flat"%>
           </div>
-        <% end %>
       <% end %>
     </div>
   </div>
