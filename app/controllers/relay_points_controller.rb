@@ -13,7 +13,7 @@ class RelayPointsController < ApplicationController
 
   def create
     @relay_point = RelayPoint.new(relay_point_params)
-    @relay_pointt.save
+    @relay_point.save
     redirect_to relay_point_path(@relay_point)
   end
 
@@ -31,6 +31,11 @@ class RelayPointsController < ApplicationController
     @relay_point = RelayPoint.find(params[:id])
     @relay_point.destroy
     redirect_to relay_points_path
+  end
+
+  def index_api
+    @relay_points = RelayPoint.where(status: 'Actif')
+    render json: @relay_points.to_json
   end
 
   private
