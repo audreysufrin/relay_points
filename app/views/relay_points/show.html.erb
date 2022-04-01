@@ -1,42 +1,42 @@
 <div class="container m-5">
-    <div class col-12 col-6>
-      <div class="card-relay-point">
-        <div class="card-info">
-          <div class= "card-img">
-            <img src=<%= @relay_point.image_shopify %>>
-          </div>
-          <div class= "card-content" >
-            <div><h2><%= @relay_point.name %></h2></div>
-            <div>
-              <p><%= @relay_point.address %></p>
-              <p><%= @relay_point.commune %></p>
-              <p><%= @relay_point.phone_number %></p>
-              <p><<%= @relay_point.status %></p>
-              <p><%= @relay_point.hours %></p>
-            </div>
-          </div>
-          <div class= "card-link">
-            <%= link_to "Modifier #{@relay_point.name}",
-              edit_relay_point_path(@relay_point)%>
-          </div>
+  <div class col-12 col-6>
+    <div class="card-relay-point">
+      <div class="card-info">
+        <div class= "card-img">
+          <img src=<%= @relay_point.image_shopify %>>
+        </div>
+        <div class= "card-content" >
+          <div><h2><%= @relay_point.name %></h2></div>
           <div>
-            <%= link_to "Delete #{@relay_point.name}",
-              relay_point_path(@relay_point),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+            <p><%= @relay_point.address %></p>
+            <p><%= @relay_point.commune %></p>
+            <p><%= @relay_point.phone_number %></p>
+            <p><%= @relay_point.status %></p>
+            <p><%= @relay_point.hours %></p>
           </div>
+        </div>
+        <div class= "card-link">
+          <%= link_to "Modifier #{@relay_point.name}",
+            edit_relay_point_path(@relay_point)%>
+        </div>
+        <div>
+          <%= link_to "Delete #{@relay_point.name}",
+            relay_point_path(@relay_point),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
         </div>
       </div>
     </div>
-
-    <div class="content">
-      <h2><%= @relay_point.name %></h2>
-      <p><%= @relay_point.hours %></p>
-      <p><%= @relay_point.address %></p>
-      <p><%= @relay_point.commune %></p>
-      <p><%= @relay_point.phone_number %></p>
-    </div>
   </div>
+
+  <div class="content">
+    <h2><%= @relay_point.name %></h2>
+    <p><%= @relay_point.hours %></p>
+    <p><%= @relay_point.address %></p>
+    <p><%= @relay_point.commune %></p>
+    <p><%= @relay_point.phone_number %></p>
+  </div>
+
   <div>
       <%= link_to '', relay_point_path(@relay_point), class: "btn btn-danger" %>
   </div>
