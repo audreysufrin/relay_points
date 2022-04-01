@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container m-5">
     <div class col-12 col-6>
       <div class="card-relay-point">
         <div class="card-info">
@@ -6,25 +6,25 @@
             <img src=<%= @relay_point.image_shopify %>>
           </div>
           <div class= "card-content" >
-            <h2><%= @relay_point.name %></h2>
-            <p><%= @relay_point.address %></p>
+            <div><h2><%= @relay_point.name %></h2></div>
+            <div><p><%= @relay_point.address %></p>
             <p><%= @relay_point.commune %></p>
             <p><%= @relay_point.phone_number %></p>
             <p><<%= @relay_point.status %></p>
             <p><%= @relay_point.hours %></p>
+            </div>
           </div>
-
-          <%= link_to "Delete #{@relay_point.name}",
-            relay_point_path(@relay_point),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-
-          <%= link_to "modifier #{@relay_point}",
-            relay_point_path(@relay_point),
-            method: :update,
-            data: { confirm: "Are you sure?" }%>>
+          <div class= "card-link">
+            <%= link_to "Modifier #{@relay_point.name}",
+              edit_relay_point_path(@relay_point)%>
+          </div>
+          <div>
+            <%= link_to "Delete #{@relay_point.name}",
+              relay_point_path(@relay_point),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+          </div>
         </div>
       </div>
     </div>
 </div>
-e

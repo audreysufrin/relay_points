@@ -2,8 +2,7 @@ require 'date'
 require 'time'
 
 class DeliveryDatesController < ApplicationController
-  def nextDeliveryDate
-    raise
+  def next_delivery_date
     date = Time.new(2022, 04, 12, 20, 04)
     if date.wday == 1 || (date.wday == 2 && date.hour < 19)
       @next_delivery = date.to_date
@@ -14,6 +13,11 @@ class DeliveryDatesController < ApplicationController
     until (@next_delivery.wday == 5)
       @next_delivery = @next_delivery.next_day
     end
+  end
+
+  def next_delivery_api
+    @next_delivery_date = nextDeliveryDate
+    render json: @next_delivery_date.to_json
   end
 end
 

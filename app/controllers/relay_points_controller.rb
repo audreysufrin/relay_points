@@ -1,5 +1,4 @@
 class RelayPointsController < ApplicationController
-
   def index
     @relay_points = RelayPoint.all
   end
