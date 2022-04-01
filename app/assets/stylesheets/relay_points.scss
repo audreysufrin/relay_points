@@ -20,6 +20,7 @@
     height: 399px;
     object-fit: contain;
     text-align: justify;
+
     border:1px solid;
     box-shadow: 0 0 15px grey;
     margin-top: 10px;
@@ -35,6 +36,6 @@
   padding: 2px;
  }
  body {
-  background-color: rgb(88, 107, 164);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.603),rgba(255,255,255,0.4)), url('legumes.jpg');
   text-align: justify;
  }
