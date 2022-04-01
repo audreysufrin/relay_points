@@ -24,11 +24,3 @@ class DeliveryDatesController < ApplicationController
     render json: @next_delivery_date.to_json
   end
 end
-
-# si next_delivery est un jour ferié
-#if date ==
-# alors next_delivery sera le vendredi suivant (next_delivery += 7)
-#else
-  #next_delivery+= 7
-#end
-# p next_delivery
