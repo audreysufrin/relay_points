@@ -1,0 +1,37 @@
+
+.p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+  text-align: center;
+  color: orange;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: green;
+  }
+.cards-list{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+    img {
+      width: 60px;
+      height: 150px;
+      object-fit: contain;
+      border: 3px solid maroon;
+      padding: 10px 50px 20px;
+      text-align: left;
+      justify-content: space-between;
+      margin: auto;
+      display:block
+    }
+}
+
+.background-form {
+  background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,0.4)), url('legumes.jpg');
+  background-size: cover;
+}
