@@ -3,21 +3,28 @@
 <% end %>
 <body>
   <div class="background-form">
-    <div class="container">
-      <div class="cards-list">
-        <% @relay_points.each do |relay_point| %>
-          <div class="card-product">
-            <%= image_tag relay_point.image_shopify %>
+    <div class="cards-list ">
+      <% @relay_points.each do |relay_point| %>
+        <div class="notification avatar-large">
+          <%= image_tag relay_point.image_shopify %>
+          <div class="notification-content">
             <h2><%= relay_point.name %></h2>
             <p><%= relay_point.address %></p>
             <p><%= relay_point.phone_number %></p>
             <p><%= relay_point.status %></p>
             <p><%= relay_point.hours %></p>
-            <%= link_to "Modifier #{relay_point.name}",
-            (relay_point),class: "btn btn-flat"%>
           </div>
-        <% end %>
-      </div>
+          <div class="notification-actions fas fa-pencil-alt far fa-trash-alt btn-flat">
+            <%= link_to "Modifier #{relay_point.name}",
+            edit_relay_point_path(relay_point)  %>
+
+            <%= link_to "Delete #{relay_point.name}",
+            relay_point_path(relay_point),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </body>
