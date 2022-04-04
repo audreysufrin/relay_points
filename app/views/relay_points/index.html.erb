@@ -2,45 +2,20 @@
 <p>Hello!<%= current_admin.email %> </p>
 <% end %>
 <body>
-  <!--<div class="background-form">
-    <div class="cards-list ">
-      <% @relay_points.each do |relay_point| %>
-        <div class="notification avatar-large">
-          <%= image_tag relay_point.image_shopify %>
-          <div class="notification-content">
-            <h2><%= relay_point.name %></h2>
-            <p><%= relay_point.address %></p>
-            <p><%= relay_point.phone_number %></p>
-            <p><%= relay_point.status %></p>
-            <p><%= relay_point.hours %></p>
-          </div>
-          <div class="notification-actions fas fa-pencil-alt far fa-trash-alt btn-flat">
-            <%= link_to "Modifier #{relay_point.name}",
-            edit_relay_point_path(relay_point)  %>
-
-            <%= link_to "Delete #{relay_point.name}",
-            relay_point_path(relay_point),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>-->
-
   <div class="container">
-    <div class="row">
-      <% @relay_points.each do |relay_point| %>
-        <div class="col-xs-4">
-          <div class="card-product">
-            <div class="card-product-infos">
-              <h2><strong><%= relay_point.name %></strong></h2>
-              <p><%= relay_point.address %>,<%= relay_point.hours %>, <%= relay_point.phone_number %></p>
-              <%= link_to "Modifier ce point relais",relay_point_path(relay_point) %>
+      <div class="row">
+        <% @relay_points.each do |relay_point| %>
+          <div class="col-xs-4">
+            <div class="card-product">
+              <div class="card-product-infos">
+                <h2><strong><%= relay_point.name %></strong></h2>
+                <p><%= relay_point.address %>,<%= relay_point.hours %>, <%= relay_point.phone_number %></p>
+                <%= link_to "Modifier ce point relais",relay_point_path(relay_point), class: "btn-flat" %>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </body>

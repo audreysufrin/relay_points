@@ -2,8 +2,9 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: white;
+  background: #ffd166;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: inset;
   display: flex;
   align-items: center;
 }
@@ -15,17 +16,21 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
+  color: #0d3b66;
+  font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color: #0d3b66;
+  font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 .card-product .card-product-infos {
