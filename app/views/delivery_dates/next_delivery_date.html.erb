@@ -4,9 +4,8 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
           <h3><strong>Les prochaines livraisons</strong></h3>
-          <%= @next_delivery.strftime("%d/%m/%Y") %>
-            <%= link_to "Back to list", next_delivery_date_path, class:"btn btn-success" %>
-            <%= link_to "Back to day_offs", day_offs_path, class:"btn btn-success" %>
+           <%= @next_delivery.strftime("%d/%m/%Y") %>
+           <%= link_to "Voir jours fériés", day_offs_path, class:"btn btn-success" %>
         </div>
       </div>
     </div>

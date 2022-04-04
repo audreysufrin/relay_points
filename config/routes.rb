@@ -8,5 +8,4 @@ Rails.application.routes.draw do
 
   root to: "relay_points#index"
   get "next_delivery_date", to: "delivery_dates#next_delivery_date"
-  get "list_day_off", to: "day_offs#index"
-end
+ end
