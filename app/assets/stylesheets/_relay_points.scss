@@ -1,31 +1,47 @@
 // Place all the styles related to the relayPoints controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-
-
-.card-info{
-  width: 674px;
-  img {
-    border-radius: 25px;
-    width: 100%;
-    height: 399px;
-    object-fit: contain;
-    text-align: justify;
-    border:1px solid;
-    box-shadow: 0 0 15px grey;
-    margin-top: 10px;
-}
+.card {
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 650px;
+  height: 600px;
+  margin: auto;
+  border-bottom-width: 20px;
 }
 
-.card-content{
-  margin-top: 20px;
-  margin-left: 5px;
-  font-size: large;
+.card > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
- .card-link{
-  padding: 2px;
- }
- body {
-  text-align: justify;
+
+.card h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 10px;
+}
+
+
+.card .card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-link{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
  }
