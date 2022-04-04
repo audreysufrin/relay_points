@@ -3,9 +3,7 @@
 <% end %>
 <body>
   <div class="background-form">
-    <div class="cards-list btn btn-flat">
-      <%= link_to "Nouveau  #{relay_point.name}",
-      relay_point_path(relay_point) %>
+    <div class="cards-list ">
       <% @relay_points.each do |relay_point| %>
         <div class="notification avatar-large">
           <%= image_tag relay_point.image_shopify %>
