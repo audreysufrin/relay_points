@@ -1,6 +1,4 @@
-// Place all the styles related to the relayPoints controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+
 .card {
   overflow: hidden;
   background-color: white;
@@ -11,11 +9,13 @@
   border-bottom-width: 20px;
 }
 
+
 .card > img {
   height: 300px;
   width: 100%;
   object-fit: cover;
 }
+
 
 .card h2 {
   font-size: 25px;
