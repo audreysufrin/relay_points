@@ -22,13 +22,17 @@
   justify-content: space-between;
 }
 #text{
-  color: white;
+  color: rgb(7, 7, 7);
+
 }
 
 .list-days-off {
   width: 30%;
   margin: auto;
-}
+  border: 1px solid rgb(1, 45, 35);
+  background-color: white;
+  padding: 20px;
+   }
 
 .header-banner {
   background-size: cover;
@@ -41,9 +45,10 @@
 }
 
 .list-date {
-  color: white;
+  color: rgb(25, 24, 24);
   font-size: 24px;
   font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
   margin: 20px;
 }
 

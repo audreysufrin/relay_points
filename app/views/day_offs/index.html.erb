@@ -5,14 +5,15 @@
 
   <ol style="list-style-type: decimal" class= "list-days-off text-center">
     <% @day_offs.each do |day_off| %>
-      <li class= "list-date"><%= day_off.day_off_date.strftime("%d/%m/%Y") %>
+      <div class= "list-date"><%= day_off.day_off_date.strftime("%d/%m/%Y") %>
         <%= link_to "Supprimer",
               day_off_path(day_off), class: "btn btn-danger m-2",
               method: :delete,
               data: { confirm: "Etes-vous sûr?" } %>
-      </li>
+      </div>
     <% end %>
-      <%= link_to "Création jour férié", new_day_off_path, class: "btn btn-light" %>
+      <%= link_to "Création jour férié", new_day_off_path, class: "btn btn-danger" %>
       <%= link_to "Prochaines livraisons", next_delivery_date_path, class: "btn btn-success" %>
+      <% ... %>
   </ol>
 </div>
