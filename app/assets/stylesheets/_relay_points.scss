@@ -1,3 +1,4 @@
+
 .card {
   overflow: hidden;
   background-color: white;
@@ -5,14 +6,16 @@
   width: 650px;
   height: 600px;
   margin: auto;
-  border-bottom-width: 20px;
+  border-bottom-width: 5px;
 }
+
 
 .card > img {
   height: 300px;
   width: 100%;
   object-fit: cover;
 }
+
 
 .card h2 {
   font-size: 25px;

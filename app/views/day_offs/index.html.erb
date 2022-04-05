@@ -1,8 +1,6 @@
 <div class="header-banner"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('vegetables.jpg') %>);">
-  <div class= "">
-    <div class= "text-center" >
-      <h1> <%= @day_offs.count %> Jours fériés </h1>
-    </div>
+  <div class= "text-center" >
+    <h1> <%= @day_offs.count %> Jours fériés </h1>
   </div>
 
   <ol style="list-style-type: decimal" class= "list-days-off text-center">
@@ -14,6 +12,7 @@
               data: { confirm: "Etes-vous sûr?" } %>
       </li>
     <% end %>
-    <%= link_to "Retour", new_day_off_path, class: "btn btn-light" %>
+      <%= link_to "Création jour férié", new_day_off_path, class: "btn btn-light" %>
+      <%= link_to "Prochaines livraisons", next_delivery_date_path, class: "btn btn-success" %>
   </ol>
 </div>
