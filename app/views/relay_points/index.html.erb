@@ -3,10 +3,11 @@
 <% end %>
 <body>
   <div class="container">
-      <div class="row">
+    <div class="row">
         <% @relay_points.each do |relay_point| %>
           <div class="col-xs-4">
             <div class="card-product">
+              <img src=<%= relay_point.image_shopify %>>
               <div class="card-product-infos">
                 <h2><strong><%= relay_point.name %></strong></h2>
                 <p><%= relay_point.address %>,<%= relay_point.hours %>, <%= relay_point.phone_number %></p>
@@ -15,7 +16,6 @@
             </div>
           </div>
         <% end %>
-      </div>
     </div>
   </div>
 </body>
