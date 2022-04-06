@@ -1,25 +1,37 @@
 <div class="background-form">
   <div class="container">
-    <div class="row">
-      <div class="row justify-content-center">
+    <%= simple_form_for(relay_point) do |f| %>
+
+      <div class="row">
+          <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+
+            <div class="row">
+
+              <div class="col-xs-12 col-sm-6">
+                <%= f.input :name %>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <%= f.input :name_shopify  %>
+              </div>
+
+            </div>
+
+          </div>
+
+        <%= f.input :name_common  %>
+        <%= f.input :hours %>
+        <%= f.input :localisation %>
+        <%= f.input :address %>
+        <%= f.input :contact %>
+        <%= f.input :status, as: :select, collection: ["actif", "inactif"] %>
+        <%= f.input :commune, as: :select, collection: ["Ajoupa-Bouillon","Anses-d'Arlet", "Basse-Pointe", "Bellefontaine", "Carbet", "Case-Pilote", "Diamant", "Ducos", "Fonds-Saint-Denis", "Fort-de-France", "François", "Grand-Rivière", "Gros-Morne", "Lamentin", "Lorrain", "Macouba","Marigot", "Marin", "Morne-Vert","Morne-Rouge", "Prêcheur", "Rivière-Pilote", "Rivière-Salée", "Robert", "Saint-Esprit", "Saint-Joseph", "Saint-Pierre", "Sainte-Anne", "Sainte-Luce", "Sainte-Marie", "Schoelcher", "Trinité", "Trois-Ilets", "Vauclin"]%>
+        <%= f.input :phone_number %>
+        <%= f.submit "Créer", class:'btn btn-danger' %>
         <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-
-          <%= simple_form_for(relay_point) do |f| %>
-            <%= f.input :name %>
-            <%= f.input :name_shopify %>
-            <%= f.input :name_common %>
-            <%= f.input :hours %>
-            <%= f.input :localisation %>
-            <%= f.input :address %>
-            <%= f.input :contact %>
-            <%= f.input :status, as: :select, collection: ["actif", "inactif"] %>
-            <%= f.input :commune, as: :select, collection: ["Ajoupa-Bouillon","Anses-d'Arlet", "Basse-Pointe", "Bellefontaine", "Carbet", "Case-Pilote", "Diamant", "Ducos", "Fonds-Saint-Denis", "Fort-de-France", "François", "Grand-Rivière", "Gros-Morne", "Lamentin", "Lorrain", "Macouba","Marigot", "Marin", "Morne-Vert","Morne-Rouge", "Prêcheur", "Rivière-Pilote", "Rivière-Salée", "Robert", "Saint-Esprit", "Saint-Joseph", "Saint-Pierre", "Sainte-Anne", "Sainte-Luce", "Sainte-Marie", "Schoelcher", "Trinité", "Trois-Ilets", "Vauclin"]%>
-            <%= f.input :phone_number %>
-            <%= f.submit class:'btn btn-danger' %>
-          <% end %>
+          <%= link_to "Retour", relay_points_path, class: "btn btn-success" %>
         </div>
-      </div>
-    </div><%= link_to "Back to list", relay_points_path, class: "btn btn-light" %>
 
-  </div>
+      </div>
+    <% end %>
+    </div>
 </div>

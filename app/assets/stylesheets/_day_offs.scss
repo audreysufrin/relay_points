@@ -28,10 +28,11 @@
 
 .list-days-off {
   width: 30%;
-  margin: auto;
+  margin: 3em auto;
   border: 1px solid rgb(1, 45, 35);
   background-color: white;
   padding: 20px;
+
    }
 
 .header-banner {
@@ -51,10 +52,6 @@
   font-weight: bold;
   margin: 20px;
 }
-
-.container {
-  overflow: hidden;
-  width: 700px;
-  height: 800px;
-  padding: 4px 12px;
+h2 {
+  color: white;
 }
