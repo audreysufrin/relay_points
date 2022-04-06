@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_135748) do
+ActiveRecord::Schema.define(version: 2022_04_06_212809) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_135748) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "pseudo"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -55,7 +56,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_135748) do
     t.string "name_common"
     t.string "contact"
     t.string "status"
-    t.integer "hours"
+    t.string "hours"
     t.string "name_shopify"
     t.string "commune"
     t.string "image_shopify"
