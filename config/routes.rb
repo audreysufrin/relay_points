@@ -8,4 +8,4 @@ Rails.application.routes.draw do
   get 'next_delivery/api', to: 'delivery_dates#next_delivery_api'
   get "next_delivery_date", to: "delivery_dates#next_delivery_date"
 
- end
+end

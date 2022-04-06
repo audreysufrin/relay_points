@@ -34,7 +34,7 @@ class RelayPointsController < ApplicationController
   end
 
   def index_api
-    @relay_points = RelayPoint.where(status: 'Actif')
+    @relay_points = RelayPoint.where(status: 'actif')
     render json: @relay_points.to_json
   end
 
