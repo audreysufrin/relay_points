@@ -1,6 +1,7 @@
 <div class="header-banner"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('vegetables.jpg') %>);">
   <div class= "text-center" >
-    <h1> <%= @day_offs.count %> Jours fériés </h1>
+    <h1> <%= @day_offs.count %> <strong>Jours fériés</strong> </h1>
+    <h2> <strong> La prochaine livraison est le :</strong> <%= @next_delivery.strftime("%d/%m/%Y") %></h2>
   </div>
 
   <ol style="list-style-type: decimal" class= "list-days-off text-center">
@@ -12,7 +13,6 @@
               data: { confirm: "Etes-vous sûr?" } %>
       </li>
     <% end %>
-      <%= link_to "Création jour férié", new_day_off_path, class: "btn btn-light" %>
-      <%= link_to "Prochaines livraisons", next_delivery_date_path, class: "btn btn-success" %>
+  <%= link_to "Création jour férié", new_day_off_path, class: "btn btn-success" %>
   </ol>
 </div>
