@@ -26,13 +26,13 @@
           </li>
         <% else %>
         <li class="nav-item active">
-          <%= link_to "", relay_points_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "", relay_points_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
           <%= link_to "Accueil", relay_points_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Nouveau point-relais", new_relay_point_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Jours fériés", day_offs_path, class: "nav-link" %>
         </li>
           <li class="nav-item">
             <%= link_to "Login", new_admin_session_path, class: "nav-link" %>
