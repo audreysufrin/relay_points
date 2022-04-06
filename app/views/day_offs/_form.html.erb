@@ -4,10 +4,10 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
           <h3><strong>Nouveau jour férié</strong></h3>
-          <%= simple_form_for(day_off) do |f| %>
-            <%= f.input :day_off_date, as: :date, label: false %>
-            <%= f.submit class:'btn btn-danger'%>
-            <%= link_to "Retour", day_offs_path, class: "btn btn-light" %>
+             <%= simple_form_for(day_off) do |f| %>
+             <%= f.input :day_off_date, html5: true, label: false %>
+             <%= f.submit class: 'btn btn-danger', value: 'Créer' %>
+             <%= link_to "Retour", day_offs_path, class: "btn btn-light" %>
             <% end %>
         </div>
       </div>
