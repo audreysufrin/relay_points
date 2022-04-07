@@ -1,4 +1,6 @@
-<div class="header-banner"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url('vegetables.jpg') %>);">
+<!--<div class="header-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4), url(<%= asset_url('vegetables.jpg') %>);">-->
+<div class="background-form vh-100">
+
   <div class= "text-center" >
     <h1> <%= @day_offs.count %> <strong>Jours fériés</strong> </h1>
     <h2> <strong> La prochaine livraison est le :</strong> <%= @next_delivery.strftime("%d/%m/%Y") %></h2>

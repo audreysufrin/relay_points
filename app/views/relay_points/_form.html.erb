@@ -1,4 +1,3 @@
-<div class="background-form">
   <div class="container">
     <%= simple_form_for(relay_point) do |f| %>
 
@@ -15,9 +14,10 @@
               <div class="col-xs-12 col-sm-6">
                 <%= f.input :name_common, placeholder: 'Entrez le nom'  %>
               </div>
+                <%= f.input :address, placeholder: "Entrez l'adresse" %>
+                <%= f.input :phone_number, placeholder: 'Entrez le numéro' %>
                 <%= f.input :hours, placeholder: "Entrez l'horaire" %>
                 <%= f.input :localisation %>
-                <%= f.input :address, placeholder: "Entrez l'adresse" %>
               <div class="col-xs-12 col-sm-6">
                 <%= f.input :contact, placeholder: 'Entrez le nom du contact' %>
               </div>
@@ -25,7 +25,7 @@
                 <%= f.input :status, as: :select, collection: ["actif", "inactif"] %>
               </div>
                 <%= f.input :commune, as: :select, collection: ["Ajoupa-Bouillon","Anses-d'Arlet", "Basse-Pointe", "Bellefontaine", "Carbet", "Case-Pilote", "Diamant", "Ducos", "Fonds-Saint-Denis", "Fort-de-France", "François", "Grand-Rivière", "Gros-Morne", "Lamentin", "Lorrain", "Macouba","Marigot", "Marin", "Morne-Vert","Morne-Rouge", "Prêcheur", "Rivière-Pilote", "Rivière-Salée", "Robert", "Saint-Esprit", "Saint-Joseph", "Saint-Pierre", "Sainte-Anne", "Sainte-Luce", "Sainte-Marie", "Schoelcher", "Trinité", "Trois-Ilets", "Vauclin"]%>
-                <%= f.input :phone_number, placeholder: 'Entrez le numéro' %>
+                <%= f.input :image_shopify, placeholder: 'Ajoutez une photo'  %>
             </div>
           </div>
         </div>
@@ -36,4 +36,3 @@
       </div>
     <% end %>
   </div>
-</div>

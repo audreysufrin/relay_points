@@ -42,6 +42,6 @@ class RelayPointsController < ApplicationController
   private
 
   def relay_point_params
-    params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :localisation, :address, :contact, :status, :commune, :phone_number)
+    params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :localisation, :address, :contact, :status, :commune, :phone_number, :image_shopify)
   end
 end
