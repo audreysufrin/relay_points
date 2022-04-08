@@ -10,23 +10,25 @@
   <%= link_to "Créer nouveau point-relais", new_relay_point_path, class: "btn btn-gradient"%>
 <% end %>
 
-<div class="container">
-  <div class="row">
-    <% @relay_points.each do |relay_point| %>
-      <div class="col-xs-12 col-sm-6">
-        <%= link_to relay_point_path(relay_point) do %>
-          <div class="card-product">
-            <img src=<%= relay_point.image_shopify %>>
-            <div class="card-product-infos">
-              <h2><%= relay_point.name %></h2>
-              <p><strong><%= relay_point.address %></strong></p>
-              <p><strong><%= relay_point.hours %></strong></p>
-              <p><strong><%= relay_point.phone_number %></strong></p>
+<div class= "background-color">
+  <div class="container">
+    <div class="row">
+      <% @relay_points.each do |relay_point| %>
+        <div class="col-xs-12 col-sm-6">
+          <%= link_to relay_point_path(relay_point) do %>
+            <div class="card-product">
+              <img src=<%= relay_point.image_shopify %>>
+              <div class="card-product-infos">
+                <h2><%= relay_point.name %></h2>
+                <p><strong><%= relay_point.address %></strong></p>
+                <p><strong><%= relay_point.hours %></strong></p>
+                <p><strong><%= relay_point.phone_number %></strong></p>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
