@@ -1,5 +1,5 @@
 class RelayPointsController < ApplicationController
-  skip_before_action :authenticate_admin!, only: [:index, :show]
+  skip_before_action :authenticate_admin!, only: [:index, :show, :index_api ]
   def index
     @relay_points = RelayPoint.all
   end
@@ -14,6 +14,7 @@ class RelayPointsController < ApplicationController
 
   def create
     @relay_point = RelayPoint.new(relay_point_params)
+    @relay_point.admin = current_admin
     @relay_point.save
     redirect_to relay_point_path(@relay_point)
   end
@@ -35,13 +36,13 @@ class RelayPointsController < ApplicationController
   end
 
   def index_api
-    @relay_points = RelayPoint.where(status: 'Actif')
+    @relay_points = RelayPoint.where(status: 'actif')
     render json: @relay_points.to_json
   end
 
   private
 
   def relay_point_params
-    params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :localisation, :address, :contact, :status, :commune, :phone_number)
+    params.require(:relay_point).permit(:name, :name_shopify, :name_common, :hours, :localisation, :address, :contact, :status, :commune, :phone_number, :image_shopify)
   end
 end
