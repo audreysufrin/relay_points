@@ -25,14 +25,13 @@
                 <%= f.input :status, as: :select, collection: ["actif", "inactif"] %>
               </div>
                 <%= f.input :commune, as: :select, collection: ["Ajoupa-Bouillon","Anses-d'Arlet", "Basse-Pointe", "Bellefontaine", "Carbet", "Case-Pilote", "Diamant", "Ducos", "Fonds-Saint-Denis", "Fort-de-France", "François", "Grand-Rivière", "Gros-Morne", "Lamentin", "Lorrain", "Macouba","Marigot", "Marin", "Morne-Vert","Morne-Rouge", "Prêcheur", "Rivière-Pilote", "Rivière-Salée", "Robert", "Saint-Esprit", "Saint-Joseph", "Saint-Pierre", "Sainte-Anne", "Sainte-Luce", "Sainte-Marie", "Schoelcher", "Trinité", "Trois-Ilets", "Vauclin"]%>
-                <%= f.input :image_shopify, placeholder: 'Ajoutez une photo'  %>
+                <%= f.input :image_shopify, placeholder: 'Ajoutez une photo' %>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-      <%= f.submit "Créer", class:'btn btn-danger' %>
-     <%= link_to "Retour", relay_points_path, class: "btn btn-success" %>
-      </div>
+     <div class= "col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+     <%= link_to "Modifier", relay_points_path, class: 'btn btn-danger' %>
+     </div>
     <% end %>
   </div>

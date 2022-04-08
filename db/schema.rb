@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 2022_04_07_141939) do
   end
 
   create_table "day_offs", force: :cascade do |t|
+    t.date "day_off_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.date "day_off_date"
   end
 
   create_table "delivery_calendars", force: :cascade do |t|
