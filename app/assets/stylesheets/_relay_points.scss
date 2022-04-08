@@ -3,10 +3,10 @@
   overflow: hidden;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 650px;
+  width: 649px;
   height: 600px;
   margin: auto;
-  border-bottom-width: 5px;
+  margin-top: 20px;
 }
 
 
@@ -38,10 +38,14 @@
   position: relative;
 }
 
-.card-link{
+.card-link {
   padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
- }
+}
+
+.card-link a {
+  color: #00414f;
+}
