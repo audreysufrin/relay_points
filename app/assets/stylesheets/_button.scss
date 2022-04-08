@@ -18,3 +18,18 @@
   color: #0d3b66;
   border-color: #0d3b66;
 }
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(beige);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(beige);
+  color: white;
+}

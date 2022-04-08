@@ -1,25 +1,31 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/photos/shopping-or-delivery-fruits-and-vegetables-picture-id1217108207?k=20&m=1217108207&s=612x612&w=0&h=pJdFZrnZlu26x-AvfDtMrze67RHSRgWjulY1xmrz3us=);">
+  <div class="container">
+    <h1>Bienvenue sur le site des points-relais <strong>Ta Nou </strong></h1>
+    <h3><strong> Des produits 100% bio et locaux pour votre santé </strong></h3>
+  </div>
+</div>
+
+
 <% if admin_signed_in? %>
-<p>Hello!<%= current_admin.email%></p>
+  <%= link_to "Créer nouveau point-relais", new_relay_point_path, class: "btn btn-gradient"%>
 <% end %>
 
 <div class="container">
   <div class="row">
-    <div>
-      <%= link_to "Créer un point relais", new_relay_point_path, class: "btn btn-flat" %>
-      <% @relay_points.each do |relay_point| %>
-        <div class="col-xs-4">
-
-          <%= link_to relay_point_path(relay_point) do %>
-            <div class="card-product">
-              <img src=<%= relay_point.image_shopify %>>
-              <div class="card-product-infos">
-                <h2><strong><%= relay_point.name %></strong></h2>
-                <p><%= relay_point.address %>,<%= relay_point.hours %>, <%= relay_point.phone_number %></p>
-              </div>
+    <% @relay_points.each do |relay_point| %>
+      <div class="col-xs-12 col-sm-6">
+        <%= link_to relay_point_path(relay_point) do %>
+          <div class="card-product">
+            <img src=<%= relay_point.image_shopify %>>
+            <div class="card-product-infos">
+              <h2><%= relay_point.name %></h2>
+              <p><strong><%= relay_point.address %></strong></p>
+              <p><strong><%= relay_point.hours %></strong></p>
+              <p><strong><%= relay_point.phone_number %></strong></p>
             </div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div> 
 </div>

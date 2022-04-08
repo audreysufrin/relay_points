@@ -1,13 +1,15 @@
 
 .card-product {
-  margin: 20px;
+  margin: 29px;
   overflow: hidden;
-  height: 120px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 160px;
+  box-shadow: 0 0 15px black;
   border: inset;
   display: flex;
   align-items: center;
   background-color: beige;
+  border-radius: 30px;
+
 }
 
 .card-product img {
@@ -17,33 +19,21 @@
 }
 
 .card-product h2 {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: bold;
   margin: 0;
-  color: #0d3b66;
-  font-family: 'Mochiy Pop P One', sans-serif;
+  color: darkgreen;
 }
 
 .card-product p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
   color: #0d3b66;
-  font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-.card-product .card-product-infos {
+.card-product-infos {
   padding: 16px;
-}
-
-
-.background-form {
-  background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,0.4)), url('legumes.jpg');
-  background-size: cover;
-}
-
-.card-index {
-  width: 380px;
 }
