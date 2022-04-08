@@ -6,33 +6,26 @@
 
             <div class="row">
 
-
-                <%= f.input :name, placeholder: 'Entrez le nom' %>
+                <%= f.input :name, label: "Nom", placeholder: 'Entrez le nom' %>
+                <%= f.input :name_shopify, label: "Nom shopify", placeholder: 'Entrez le nom shopify'  %>
+                <%= f.input :address, label: "Adresse", placeholder: "Entrez l'adresse" %>
+                <%= f.input :phone_number, label: "N° de téléphone", placeholder: 'Entrez le numéro' %>
+                <%= f.input :hours, label: "Horaires", placeholder: "Entrez l'horaire" %>
+                <%= f.input :localisation, label: "Localisation" %>
               <div class="col-xs-12 col-sm-6">
-                <%= f.input :name_shopify, placeholder: 'Entrez le nom shopify'  %>
-              </div>
-              <div class="col-xs-12 col-sm-6">
-                <%= f.input :name_common, placeholder: 'Entrez le nom'  %>
-              </div>
-                <%= f.input :address, placeholder: "Entrez l'adresse" %>
-                <%= f.input :phone_number, placeholder: 'Entrez le numéro' %>
-                <%= f.input :hours, placeholder: "Entrez l'horaire" %>
-                <%= f.input :localisation %>
-              <div class="col-xs-12 col-sm-6">
-                <%= f.input :contact, placeholder: 'Entrez le nom du contact' %>
+                <%= f.input :contact, label:"Contact", placeholder: 'Entrez le nom du contact' %>
               </div>
               <div class="col-xs-12 col-sm-6">
                 <%= f.input :status, as: :select, collection: ["actif", "inactif"] %>
               </div>
-                <%= f.input :commune, as: :select, collection: ["Ajoupa-Bouillon","Anses-d'Arlet", "Basse-Pointe", "Bellefontaine", "Carbet", "Case-Pilote", "Diamant", "Ducos", "Fonds-Saint-Denis", "Fort-de-France", "François", "Grand-Rivière", "Gros-Morne", "Lamentin", "Lorrain", "Macouba","Marigot", "Marin", "Morne-Vert","Morne-Rouge", "Prêcheur", "Rivière-Pilote", "Rivière-Salée", "Robert", "Saint-Esprit", "Saint-Joseph", "Saint-Pierre", "Sainte-Anne", "Sainte-Luce", "Sainte-Marie", "Schoelcher", "Trinité", "Trois-Ilets", "Vauclin"]%>
-                <%= f.input :image_shopify, placeholder: 'Ajoutez une photo'  %>
+                <%= f.input :commune, label:"Commune", as: :select, collection: ["Ajoupa-Bouillon","Anses-d'Arlet", "Basse-Pointe", "Bellefontaine", "Carbet", "Case-Pilote", "Diamant", "Ducos", "Fonds-Saint-Denis", "Fort-de-France", "François", "Grand-Rivière", "Gros-Morne", "Lamentin", "Lorrain", "Macouba","Marigot", "Marin", "Morne-Vert","Morne-Rouge", "Prêcheur", "Rivière-Pilote", "Rivière-Salée", "Robert", "Saint-Esprit", "Saint-Joseph", "Saint-Pierre", "Sainte-Anne", "Sainte-Luce", "Sainte-Marie", "Schoelcher", "Trinité", "Trois-Ilets", "Vauclin"]%>
+                <%= f.input :image_shopify, label: "Photo", placeholder: 'Ajoutez une photo' %>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-      <%= f.submit "Créer", class:'btn btn-danger' %>
-     <%= link_to "Retour", relay_points_path, class: "btn btn-success" %>
-      </div>
+     <div class= "col-12 col-md-8 col-lg-5 offset-md-2 offset-lg-4">
+       <%= f.submit "Valider", class:"btn btn-danger" %>
+     </div>
     <% end %>
   </div>

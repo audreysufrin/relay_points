@@ -15,16 +15,13 @@
             <%= link_to "Accueil", relay_points_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Créer nouveau point-relais", new_relay_point_path, class: "nav-link" %>
+            <%= link_to "Créer un nouveau point-relais", new_relay_point_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Jours fériés", day_offs_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Prochaine date de livraison", day_offs_path, class: "nav-link" %>
           </li>
           <li class="navbar-logout">
-            <%= link_to "Log out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
+            <%= link_to "Déconnexion", destroy_admin_session_path, method: :delete, class: "nav-link" %>
           </li>
         <% else %>
           <li class="nav-item active">
