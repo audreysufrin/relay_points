@@ -26,6 +26,7 @@ class RelayPointsController < ApplicationController
   def update
     @relay_point = RelayPoint.find(params[:id])
     @relay_point.update(relay_point_params)
+    @relay_point.save
     redirect_to relay_point_path(@relay_point)
   end
 
