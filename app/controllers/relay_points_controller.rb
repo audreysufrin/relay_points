@@ -1,5 +1,5 @@
 class RelayPointsController < ApplicationController
-  skip_before_action :authenticate_admin!, only: [:index, :show, :index_api ]
+  skip_before_action :authenticate_admin!, only: [:index, :index_api ]
   def index
     @relay_points = RelayPoint.all
   end
