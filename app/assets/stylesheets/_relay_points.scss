@@ -5,7 +5,7 @@
   width: 649px;
   height: 600px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 0px;
   border-radius: 30px;
   border: inset;
   box-shadow: 0 0 15px black;
@@ -21,10 +21,10 @@
 
 
 .card h2 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   margin: 2px;
-  color: darkgreen;
+  color: #00414f;
   text-align: center;
 }
 
@@ -32,6 +32,7 @@
   font-size: 12px;
   opacity: .7;
   margin: 10px;
+  color: #00414f;
 }
 
 
@@ -53,4 +54,9 @@
 
 .card-link a {
   color: #00414f;
+}
+
+.background-img {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.514),rgba(255,255,255,0.4)),url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7e70fb6d-f727-4661-a0f8-ed848f339942/bon-vivant-Ooj1c6fhdFM-unsplash_1_2_2560x.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220411%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220411T190449Z&X-Amz-Expires=86400&X-Amz-Signature=f9a7af4094e239b6b618364c7db65374dd4347a3191952a581fee4bb129589c0&X-Amz-SignedHeaders=host&x-id=GetObject');
+  height: 800px;
 }
