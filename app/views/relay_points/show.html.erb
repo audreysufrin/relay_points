@@ -1,4 +1,8 @@
-<div class="background-form">
+<div class="background-img">
+
+  <%= link_to "< Retour",
+    relay_points_path, class:"btn btn-index"%>
+
 <div class="container m-12">
   <div class="card">
     <img src=<%= @relay_point.image_shopify %>>
@@ -25,10 +29,6 @@
             relay_point_path(@relay_point),
             method: :delete,
             data: { confirm: "Êtes-vous sûr?" } %>
-        </div>
-        <div>
-          <%= link_to "Retour",
-            relay_points_path, class:"btn btn-gradient"%>
         </div>
       </div>
     </div>
