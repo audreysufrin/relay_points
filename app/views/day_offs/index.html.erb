@@ -1,10 +1,13 @@
 <!--<div class="header-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4), url(<%= asset_url('vegetables.jpg') %>);">-->
-<div class="background-form vh-100">
+<div class="background-form">
 
   <div class= "text-center" >
-    <h1> <%= @day_offs.count %> <strong>Jours fériés</strong> </h1>
+    <h1> <strong>Liste des jours fériés</strong> </h1>
     <h2> <strong> La prochaine livraison est le :</strong> <%= @next_delivery.strftime("%d/%m/%Y") %></h2>
   </div>
+    <div class= "col-12 col-md-8 col-lg-5 offset-md-2 offset-lg-6">
+    <%= link_to "Créer un jour", new_day_off_path, class: "btn btn-success" %>
+    </div>
 
   <ol style="list-style-type: decimal" class= "list-days-off text-center">
     <% @day_offs.each do |day_off| %>
@@ -15,6 +18,5 @@
               data: { confirm: "Etes-vous sûr?" } %>
       </li>
     <% end %>
-  <%= link_to "Création jour férié", new_day_off_path, class: "btn btn-success" %>
   </ol>
 </div>
