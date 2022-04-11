@@ -1,12 +1,14 @@
 
 .card {
   overflow: hidden;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: beige;
   width: 649px;
   height: 600px;
   margin: auto;
   margin-top: 20px;
+  border-radius: 30px;
+  border: inset;
+  box-shadow: 0 0 15px black;
 }
 
 
@@ -21,6 +23,8 @@
   font-size: 25px;
   font-weight: bold;
   margin: 2px;
+  color: darkgreen;
+  text-align: center;
 }
 
 .card p {
