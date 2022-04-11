@@ -9,7 +9,8 @@
   align-items: center;
   background-color: #054a29;
   border-radius: 30px;
-
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .card-product img {
@@ -36,4 +37,13 @@
 
 .card-product-infos {
   padding: 16px;
+}
+
+.card-link-index {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  background-color: beige;
 }
