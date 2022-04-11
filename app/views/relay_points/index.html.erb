@@ -1,14 +1,17 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7e70fb6d-f727-4661-a0f8-ed848f339942/bon-vivant-Ooj1c6fhdFM-unsplash_1_2_2560x.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220411%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220411T190449Z&X-Amz-Expires=86400&X-Amz-Signature=f9a7af4094e239b6b618364c7db65374dd4347a3191952a581fee4bb129589c0&X-Amz-SignedHeaders=host&x-id=GetObject')">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.shopify.com/s/files/1/0246/4035/6429/files/bon-vivant-Ooj1c6fhdFM-unsplash_1_2_1900x.jpg?v=1641256074);">
+
   <div class="container">
     <h1>Bienvenue sur le site des points-relais <strong>Ta Nou </strong></h1>
     <h3><strong> Des produits 100% bio et locaux pour votre santé </strong></h3>
   </div>
 </div>
 
+<div class="card-link-index">
+  <% if admin_signed_in? %>
+    <%= link_to "Créer nouveau point-relais", new_relay_point_path, class: "btn-index"%>
+  <% end %>
+</div>
 
-<% if admin_signed_in? %>
-  <%= link_to "Créer nouveau point-relais", new_relay_point_path, class: "btn btn-gradient"%>
-<% end %>
 
 <div class= "background-color">
   <div class="container">
