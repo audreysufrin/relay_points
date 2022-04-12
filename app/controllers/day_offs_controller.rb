@@ -31,7 +31,7 @@ class DayOffsController < ApplicationController
   end
 
   def next_delivery_date
-    date = Date.today
+    date = DateTime.now
     if date.wday == 1 || (date.wday == 2 && date.hour < 19)
       @next_delivery = date.to_date
     else
