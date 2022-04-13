@@ -1,0 +1,43 @@
+<ul class="list-inline"></ul>
+<div class= "background-color">
+  <div class="container">
+    <div class="row" id="results">
+
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+const results = document.querySelector("#results")
+fetch("https://relaypoints.herokuapp.com/relay_points/api")
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data);
+    data.forEach(element => {
+      console.log(element["address"]);
+      const movie = `<div class="col-xs-12 col-sm-6">
+  <div class="card-product">
+    <img src= "${element["image_shopify"]}">
+    <div class="card-product-infos">
+      <h2>${element["name"]}</h2>
+      <p><strong>${element["address"]}</strong></p>
+      <p><strong>${element["commune"]}</strong></p>
+      <p><strong>${element["hours"]}</strong></p>
+    </div>
+  </div>`
+        results.insertAdjacentHTML("beforeend", movie)
+      });
+    data.Search.forEach((result) => {
+
+      })
+    })
+
+/*fetch("https://relaypoints.herokuapp.com/relay_points/api")
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data);
+    console.log(data[0]["name"])
+  })*/
+</script>
