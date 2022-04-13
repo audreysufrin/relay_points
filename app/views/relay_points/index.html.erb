@@ -3,8 +3,22 @@
   <div class="container">
     <h1>Bienvenue sur le site des points-relais <strong>Ta Nou </strong></h1>
     <h3><strong> Des produits 100% bio et locaux pour votre santé </strong></h3>
+<h4 class="text-center"> Recherche par commune</h4>
+<div class="container">
+
+      <%= form_tag relay_points_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form control",
+      placeholder: "Entre ton choix"
+      %>
+      <%= submit_tag "Recherche", class: "btn btn-success" %>
+      <% end %>
+
+</div>
   </div>
 </div>
+
 
 <div class="card-link-index">
   <% if admin_signed_in? %>
