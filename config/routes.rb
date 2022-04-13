@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :relay_points
   get 'days_offs/api', to: 'days_offs#next_delivery_api'
   resources :day_offs
+  get '/test_api', to: 'pages#api'
 end
