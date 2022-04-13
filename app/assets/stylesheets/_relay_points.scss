@@ -70,3 +70,33 @@
   background-image: linear-gradient(rgba(255, 255, 255, 0.411),rgba(255,255,255,0.4)),url("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7e70fb6d-f727-4661-a0f8-ed848f339942/bon-vivant-Ooj1c6fhdFM-unsplash_1_2_2560x.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220411%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220411T211140Z&X-Amz-Expires=86400&X-Amz-Signature=9feccb4e5b140e7f4a036d878c993ce62ccc98defbdbd642ee8c6ec6008d1117&X-Amz-SignedHeaders=host&x-id=GetObject");
   height: 800px;
 }
+
+h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 2px;
+  color: #f4f5f6;
+  }
+  .search-form-control {
+    position: relative;
+  }
+
+  .search-form-control .btn {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .search-form-control .form-control {
+    height: 3.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid #E7E7E7;
+  }
+
+  .search-form-control .form-control:focus {
+    border: 1px solid #1EDD88;
+    outline: none !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+

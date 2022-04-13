@@ -2,6 +2,11 @@ class RelayPointsController < ApplicationController
   skip_before_action :authenticate_admin!, only: [:index, :index_api ]
   def index
     @relay_points = RelayPoint.all
+    if params[:query].present?
+      @relay_points = RelayPoint.where("commune ILIKE ?", "#{params[:query]}")
+    else
+      @relay_points = RelayPoint.all
+    end
   end
 
   def show
