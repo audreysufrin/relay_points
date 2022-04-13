@@ -10,7 +10,7 @@
     <% @day_offs.each do |day_off| %>
       <li class= "list-date"><%= day_off.day_off_date.strftime("%d/%m/%Y") %>
         <%= link_to "Supprimer",
-              day_off_path(day_off), class: "btn btn-danger m-2",
+              day_off_path(day_off), class: "btn btn-warning",
               method: :delete,
               data: { confirm: "Etes-vous sûr?" } %>
       </li>
