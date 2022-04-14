@@ -10,7 +10,7 @@
 
 
 <script>
-/*const results = document.querySelector("#results")
+const results = document.querySelector("#results");
 fetch("https://relaypoints.herokuapp.com/relay_points/api")
   .then(response => response.json())
   .then((data) => {
@@ -30,15 +30,15 @@ fetch("https://relaypoints.herokuapp.com/relay_points/api")
         results.insertAdjacentHTML("beforeend", movie)
       });
 
-    })*/
+    })
 
-const next_delivery_date = document.querySelector("#next-delivery-date")
+const next_delivery_date = document.querySelector("#next-delivery-date");
 fetch("https://relaypoints.herokuapp.com/day_offs/api")
   .then(response => response.json())
   .then((data) => {
-    console.log(data);
+    console.log(data["next_delivery_date"]);
 
-      next_delivery_date.innerText = "b#a"
+      next_delivery_date.innerText = data["next_delivery_date"]
       });
 /*fetch("https://relaypoints.herokuapp.com/relay_points/api")
   .then(response => response.json())
