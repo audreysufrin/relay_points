@@ -6,12 +6,12 @@
 }
 
 .banner h1 {
-  margin: 0;
+  margin: -88px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
   color: beige;
-  padding: 0px;
+  padding: 152px;
 }
 
 .banner h3 {
@@ -19,5 +19,11 @@
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   color: beige;
-  padding: 26px;
+  margin: -130px;
+}
+
+.container-recherche{
+  text-align: end;
+  display: block;
+  margin: -123px;
 }
