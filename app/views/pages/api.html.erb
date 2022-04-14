@@ -1,4 +1,4 @@
-<ul class="list-inline"></ul>
+<h2 id="next-delivery-date"></h2>
 <div class= "background-color">
   <div class="container">
     <div class="row" id="results">
@@ -29,11 +29,17 @@ fetch("https://relaypoints.herokuapp.com/relay_points/api")
   </div>`
         results.insertAdjacentHTML("beforeend", movie)
       });
-    data.Search.forEach((result) => {
 
-      })
     })
 
+const next_delivery_date = document.querySelector("#next-delivery-date")
+fetch("https://relaypoints.herokuapp.com/day_offs/api")
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data);
+
+      next_delivery_date.innerText(data["next-delivery-date"])
+      });
 /*fetch("https://relaypoints.herokuapp.com/relay_points/api")
   .then(response => response.json())
   .then((data) => {

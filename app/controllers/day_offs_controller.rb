@@ -49,13 +49,13 @@ class DayOffsController < ApplicationController
   end
 
   def next_delivery_api
-    @next_delivery_date = next_delivery_date
-    render json: @next_delivery_date.to_json
+    @next_delivery = { next_delivery_date: next_delivery_date }
+    render json: @next_delivery.to_json
   end
-end
 
   private
 
   def day_off_params
     params.require(:day_off).permit(:day_off_date)
   end
+end
