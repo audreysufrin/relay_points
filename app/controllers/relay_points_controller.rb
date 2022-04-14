@@ -3,7 +3,8 @@ class RelayPointsController < ApplicationController
   def index
     @relay_points = RelayPoint.all
     if params[:query].present?
-      @relay_points = RelayPoint.where("commune ILIKE ?", "#{params[:query]}")
+      sql_query = "commune ILIKE :query OR status ILIKE :query"
+      @relay_points = RelayPoint.where(sql_query, query: "%#{params[:query]}%")
     else
       @relay_points = RelayPoint.all
     end
